@@ -33,7 +33,7 @@ body {
 
     /*simplificando*/
     background: var(--bg-url) no-repeat top center/cover;
-    height: 100vh;
+    height: 102vh;
 }
 
 body * {
@@ -111,6 +111,7 @@ body * {
 /*links*/
 
 ul {
+    border: 1px solid green;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -140,6 +141,7 @@ ul li a:hover {
  }
 
  #amigurumi {
+    border: 1px solid red;
     display: flex;
     padding-top: 5px;
     justify-content: center;
@@ -186,6 +188,7 @@ footer {
 }
 
 #heart img {
+    border: 1px solid yellow;
     display: flex;
     width: 50px;
     margin: auto;
