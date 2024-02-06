@@ -42,6 +42,7 @@ body * {
 }
 
 #container {
+    border: 1px solid red;
     width: 100%;
     max-width: 588px;
     margin: 56px auto 0;
