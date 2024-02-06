@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color:white;
+    --bg-url: url(./assets/bg_dark.jpg);
+    --stroke-color: rgba(54, 169, 225, 0.5); 
+    --surface-color: rgba(294, 113, 184, 0.2);
+    --surface-color-hover:rgba(4, 67, 101, 0.05);
+    --switch-bg-url: url(./assets/moon-star.svg);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(./assets/bg_light.jpg);   
+    --stroke-color: rgba(54, 169, 225, 0.5);
+    --surface-color: rgba(143, 201, 239, 0.5);
+    --surface-color-hover: rgba(149, 213, 243, 1);
+    --switch-bg-url: url(./assets/sun.svg);
+   
+    
+}
+   
+
+body {
+    /*background-image:url(./assets/bg_dark.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:cover;*/
+
+    /*simplificando*/
+    background: var(--bg-url) no-repeat top center/cover;
+    height: 100vh;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    border: 1px red solid;
+    width: 100%;
+    max-width: 580px;
+    height: 800px;
+    margin: 56px auto 0px;   
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    width: 112px;
+    height: 112px;
+    
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background:rgba(0, 57, 87, 0.7) var(--switch-bg-url) 
+    no-repeat center;
+    border: 0.5px solid rgba(54, 169, 225, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform:translateY(-50%);
+    animation: slide-back 0.3s;
+   
+}
+
+.light #switch button {
+    animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--stroke-color);
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: (4px);
+    border-radius: 9999px;
+}
+/*links*/
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);   
+    text-decoration: none;  
+    font-weight: 400;
+    transition: background 0.5s;
+}
+
+ul li a:hover {
+    background: var(--surface-color-hover);
+    border: 2px solid var(--stroke-color);
+ }
+
+ #amigurumi {
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+   
+ }
+
+ #amigurumi img {
+    width: 50px;
+    height: 50px; 
+    animation:
+        amigurumi 4s infinite ease-in-out; 
+ } 
+ 
+ @keyframes amigurumi {
+    50% {
+        transform: translateY(-20%);
+    }
+ }
+ #amigurumi img:nth-child(1) {
+    animation-delay: 0s;
+}
+#amigurumi img:nth-child(2) {
+    animation-delay: 1s;
+}
+#amigurumi img:nth-child(3) {
+    animation-delay: 2s;
+}
+#amigurumi img:nth-child(4) {
+    animation-delay: 4s;
+}
+#amigurumi img:nth-child(5) {
+    animation-delay: 3s;
+}
+#amigurumi img:nth-child(6) {
+    animation-delay: 1.5s;
+}
+   
+footer {
+    padding: 24px 0;
+    text-align: center;
+     
+}
+
+#heart img {
+    display: flex;
+    width: 50px;
+    margin: auto;
+    gap: 10px;
+
+}
+
+@media (min-width: 700px) {
+    :root {
+        --bg-url:url(./assets/bg_desktop_dark.jpg);
+    }
+
+    .light {
+        --bg-url:url(./assets/bg_desktop_light.jpg);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+    
+  
