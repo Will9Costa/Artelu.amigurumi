@@ -44,9 +44,11 @@ body * {
 #container {
     border: 1px red solid;
     width: 100%;
-    max-width: 580px;
-    height: 800px;
-    margin: 56px auto 0px;   
+    max-width: 588px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+    
+  
 }
 
 #profile {
@@ -139,7 +141,7 @@ ul li a:hover {
 
  #amigurumi {
     display: flex;
-    padding-top: 40px;
+    padding-top: 5px;
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -147,8 +149,8 @@ ul li a:hover {
  }
 
  #amigurumi img {
-    width: 50px;
-    height: 50px; 
+    width: 35px;
+    height: 35px; 
     animation:
         amigurumi 4s infinite ease-in-out; 
  } 
