@@ -33,7 +33,7 @@ body {
 
     /*simplificando*/
     background: var(--bg-url) no-repeat top center/cover;
-    height: 102vh;
+    height: 100vh;
 }
 
 body * {
@@ -42,12 +42,11 @@ body * {
 }
 
 #container {
-    border: 1px solid red;
     width: 100%;
     max-width: 588px;
-    margin: 56px auto 0;
-    padding: 0 24px;
-    
+    margin: 56px auto 0px;
+    padding: 0px 24px;
+
   
 }
 
