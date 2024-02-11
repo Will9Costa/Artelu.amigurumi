@@ -6,7 +6,7 @@
 
 :root {
     --text-color:white;
-    --bg-url: url(./assets/bg_dark_2.jpg);
+    --bg-url: url(./assets/bg_dark.jpg);
     --stroke-color: rgba(54, 169, 225, 0.5); 
     --surface-color: rgba(294, 113, 184, 0.2);
     --surface-color-hover:rgba(4, 67, 101, 0.05);
